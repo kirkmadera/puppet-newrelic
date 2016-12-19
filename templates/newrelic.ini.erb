@@ -741,3 +741,6 @@ newrelic.webtransaction.name.files = "<%= scope['::newrelic::agent::php::newreli
 ;
 ;newrelic.browser_monitoring.attributes.include = ""
 ;newrelic.browser_monitoring.attributes.exclude = ""
+<%- if scope['::newrelic::agent::php::ignore_user_exception_handler'] -%>
+	newrelic.error_collector.ignore_user_exception_handler = <%= scope['::newrelic::agent::php::ignore_user_exception_handler'] %>
+<%- end -%>
